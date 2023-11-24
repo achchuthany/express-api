@@ -64,3 +64,12 @@ Reference: https://sequelize.org/docs/v6/other-topics/migrations/#running-migrat
 ```
 npm install
 ```
+
+### Run the Application
+```
+npm start
+```
+
+### Download and Install Postman
+https://www.postman.com/downloads/
+
