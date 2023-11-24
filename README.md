@@ -27,6 +27,9 @@ Clone the repository to your local machine:
 git clone https://github.com/achchuthany/express-api.git
 cd express-api
 ```
+
+## Getting Started
+
 ### To install the Sequelize CLI
 
 ```
@@ -48,5 +51,16 @@ Navigate to config/config.json and update the development section:
 ```
 you have to update the username,password based on your configuration
 
-## Create a Database
+### Create a Database
 You have to create a database ``` express_api ```
+
+### Running Migrations
+```
+npx sequelize-cli db:migrate
+```
+Reference: https://sequelize.org/docs/v6/other-topics/migrations/#running-migrations
+
+### Install the Dependencies 
+```
+npm install
+```
