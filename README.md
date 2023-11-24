@@ -1,16 +1,42 @@
-## Install Node Js 
- Download and Install from [nodejs.org](https://nodejs.org/en/download)
+# Project Name
+
+Sample Express API Application
 
 
-## To install the Sequelize CLI:
+## Table of Contents
 
-``` npm install --save-dev sequelize-cli ```
+- [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+- [Sequelize Setup](#sequelize-setup)
+    - [Update Database Config](#update-database-config)
+    - [Create Database](#create-database)
 
+## Getting Started
+
+### Prerequisites
+
+- Node.js: [Download and Install Node.js](https://nodejs.org/en/download/)
+- Git: [Download and Install Git](https://git-scm.com/downloads)
+
+### Installation
+
+Clone the repository to your local machine:
+
+```
+git clone https://github.com/achchuthany/express-api.git
+cd express-api
+```
+### To install the Sequelize CLI
+
+```
+npm install --save-dev sequelize-cli
+```
 Reference : https://sequelize.org/docs/v6/other-topics/migrations/
 
-## Update the Database config
+### Update Database Config
+Navigate to config/config.json and update the development section:
 
-Navigate to  **config/config.json**
 ```
 "development": {
     "username": "root",
@@ -22,6 +48,5 @@ Navigate to  **config/config.json**
 ```
 you have to update the username,password based on your configuration
 
-## Create a Database 
-
+## Create a Database
 You have to create a database ``` express_api ```
