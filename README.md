@@ -28,7 +28,7 @@ git clone https://github.com/achchuthany/express-api.git
 cd express-api
 ```
 
-## Getting Started
+## Sequelize Setu
 
 ### To install the Sequelize CLI
 
