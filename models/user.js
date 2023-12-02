@@ -14,26 +14,28 @@ module.exports = (sequelize, DataTypes) => {
             this.hasMany(Post, {foreignKey: 'userId', as: 'posts'})
         }
 
-        toJSON() {
-            return {...this.get(), id: undefined};
-        }
+        // toJSON() {
+        //     return {...this.get(), id: undefined};
+        // }
     };
     User.init({
-        uuid: {
+        id: {
+            allowNull: false,
+            primaryKey: true,
             type: DataTypes.UUID,
             defaultValue: DataTypes.UUIDV4,
         },
         name: {
-            type: DataTypes.STRING,
             allowNull: false,
+            type: DataTypes.STRING,
             validate: {
                 notNull: {msg: 'User must have a name'},
                 notEmpty: {msg: 'Name must not be empty'}
             }
         },
         email: {
-            type: DataTypes.STRING,
             allowNull: false,
+            type: DataTypes.STRING,
             validate: {
                 notNull: {msg: 'User must have a email'},
                 notEmpty: {msg: 'Email must not be empty'},
@@ -41,12 +43,20 @@ module.exports = (sequelize, DataTypes) => {
             }
         },
         role: {
-            type: DataTypes.STRING,
             allowNull: false,
+            type: DataTypes.STRING,
             validate: {
                 notNull: {msg: 'User must have a role'},
                 notEmpty: {msg: 'Role must not be empty'}
             }
+        },
+        createdAt: {
+            allowNull: false,
+            type: DataTypes.DATE
+        },
+        updatedAt: {
+            allowNull: false,
+            type: DataTypes.DATE
         }
     }, {
         sequelize,

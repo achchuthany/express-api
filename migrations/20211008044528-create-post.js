@@ -4,11 +4,7 @@ module.exports = {
         await queryInterface.createTable('posts', {
             id: {
                 allowNull: false,
-                autoIncrement: true,
                 primaryKey: true,
-                type: DataTypes.INTEGER
-            },
-            uuid: {
                 type: DataTypes.UUID,
                 defaultValue: DataTypes.UUIDV4,
             },
@@ -17,8 +13,14 @@ module.exports = {
                 allowNull: false
             },
             userId: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.UUID,
                 allowNull: false,
+                onDelete: "RESTRICT",
+                onUpdate: "CASCADE",
+                references: {
+                    model: "users",
+                    key: "id"
+                },
             },
             createdAt: {
                 allowNull: false,
